@@ -1,7 +1,10 @@
 main {
   width: 100%;
-  padding-top: 51px;
   background-color: #272A2F;
+}
+
+.main-inner {
+  padding-top: 109px;
 }
 
 .author {
@@ -17,6 +20,7 @@ main {
 
 .avatar > img {
   height: 355px;
+  object-fit: cover;
 }
 
 .introduce {
@@ -89,6 +93,7 @@ main {
 
 @media screen and (max-width: 1000px) {
   .author {
+    padding-top: 109px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

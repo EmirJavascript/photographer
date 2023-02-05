@@ -33,30 +33,19 @@ pics.forEach((imgSrc) => {
   const imgForGallery = createImg(imgSrc)
   const imgForModal = createImg(imgSrc)
 
-  imgForGallery.addEventListener('click', () => {
+  const child = document.createElement('div')
+  child.className = 'child'
+
+  const svjImage = createImg('./imagse/lupa.svg')
+  child.append(svjImage)  
+
+  child.addEventListener('click', () => {
     overlay.classList.add('open')
     modal.append(imgForModal)
   })
 
-  // const box = document.createElement('button')
-  // box.classList = 'filter'
-  // const lupa = document.createElement('div')
-
-  // lupa.classList = 'magnifierImg'
-  // imgForGallery.append(box)
-  // box.append(lupa)
-  // imgForGallery.addEventListener('mouseenter', () => {
-  //   box.style.display = 'block'
-  // })
-  // imgForGallery.addEventListener('mouseleave', () => {
-  //   box.style.display = 'none'
-  // })
-
-
-
-
   gallery.append(home)
-  home.append(imgForGallery)
+  home.append(imgForGallery, child)
 })
 
 closeBtn.addEventListener('click', () => {
